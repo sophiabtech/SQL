@@ -1,0 +1,19 @@
+--Create a grocery store database
+
+CREATE TABLE store (id integer primary key, name text, price integer, quantity integer, aisle integer, rating integer);
+
+INSERT INTO store values (1, "Bread", 2.99, 20, 10, 5);
+INSERT INTO store values (2, "Eggs", 3.99, 50, 15, 6);
+INSERT INTO store values (3, "Milk", 1.99, 60, 14, 5);
+INSERT INTO store values (4, "Flour", 1.29, 40, 12, 4);
+INSERT INTO store values (5, "Oil", 2.69, 25, 12, 5);
+
+--display the database ordered
+SELECT * FROM store
+ORDER BY aisle;
+
+SELECT id, name, rating from store order by id; 
+
+SELECT name, quantity from store group by name;
+
+SELECT sum(price) from store;
